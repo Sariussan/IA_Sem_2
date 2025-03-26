@@ -48,7 +48,7 @@ Windows oder Mac OS sind hier möglich
         -   öffnen -> projekt erstellen mit java, ordner aussuchen(am besten einen gesonderten Überordner für alle Programmiersachen anlegen)
         -   Java installieren
             -   Entweder bei Project creation ![Development Environment](./bild1.png)
-            -   Unter Project Structure
+            -   oder im geöffneten Projekt unter Project Structure
             -   -   drücken -> Download jdk Optionen:
                     -   version 24 -> Oracle OpenJDK
                     -   Version 23 -> Azul Zulu Community (auch open Source)
