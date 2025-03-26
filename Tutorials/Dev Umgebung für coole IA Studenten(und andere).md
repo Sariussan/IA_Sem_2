@@ -48,7 +48,7 @@ Windows oder Mac OS sind hier möglich
         -   öffnen -> projekt erstellen mit java, ordner aussuchen(am besten einen gesonderten Überordner für alle Programmiersachen anlegen)
         -   Java installieren
             -   Entweder bei Project creation
-                ![Project Creation.png](./bild1.png)
+                ![Project Creation.png](./bild1.jpg)
             -   oder im geöffneten Projekt unter Project Structure
             -   -   drücken -> Download jdk Optionen:
                     -   version 24 -> Oracle OpenJDK
