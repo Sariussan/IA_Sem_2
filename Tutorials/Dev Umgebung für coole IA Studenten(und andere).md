@@ -47,7 +47,8 @@ Windows oder Mac OS sind hier möglich
         -   add open folder as project -> aktivieren
         -   öffnen -> projekt erstellen mit java, ordner aussuchen(am besten einen gesonderten Überordner für alle Programmiersachen anlegen)
         -   Java installieren
-            -   Entweder bei Project creation ![Development Environment](./bild1.png)
+            -   Entweder bei Project creation
+                ![Project Creation.png](./bild1.png)
             -   oder im geöffneten Projekt unter Project Structure
             -   -   drücken -> Download jdk Optionen:
                     -   version 24 -> Oracle OpenJDK
