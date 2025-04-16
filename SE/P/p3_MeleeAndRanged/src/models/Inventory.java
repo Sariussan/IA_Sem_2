@@ -17,6 +17,7 @@ public class Inventory {
         for(int i = 0; i < size; i++) {
             if(inventory[i] == null) {
                 inventory[i] = item;
+                System.out.println("Item added to inventory: " + item.getName());
                 return item;
             }
         }
