@@ -1,6 +1,7 @@
 package programs;
 
 import models.*;
+import monster.*;
 
 public class Game {
 
@@ -16,11 +17,16 @@ public class Game {
     public void runGame() {
 
         // setup
-        Weapon weapon1 = new MeleeWeapon(1, "schwert", 2.5, 5.0, 5.0);
-        Weapon weapon2 = new RangedWeapon(1, "Bogen", 2.5, 5.0, 15.0);
-        Potion potion1 = new Potion(2, "Heiltrank", 1.0, "Heilung 5");
-        Armor armor1 = new Armor(3, "Rüstung", 10.0, 50.0);
-        Food food1 = new Food(4, "Schweinsbratenkit", 5.0, 20);
+        Weapon weapon1 = new MeleeWeapon("schwert", 2.5, 5.0, 5.0);
+        System.out.println("Item Count: " + Item.getItemCount());
+        Weapon weapon2 = new RangedWeapon("Bogen", 2.5, 5.0, 15.0);
+        System.out.println("Item Count: " + Item.getItemCount());
+        Potion potion1 = new Potion("Heiltrank", 1.0, "Heilung 5");
+        System.out.println("Item Count: " + Item.getItemCount());
+        Armor armor1 = new Armor("Rüstung", 10.0, 50.0);
+        System.out.println("Item Count: " + Item.getItemCount());
+        Food food1 = new Food("Schweinsbratenkit", 5.0, 20);
+        System.out.println("Item Count: " + Item.getItemCount());
         this.inventory.addItem(weapon1);
         this.inventory.addItem(weapon2);
         this.inventory.addItem(potion1);
@@ -32,11 +38,20 @@ public class Game {
 
         // use methods of items
 
+        // Monsters and Heroes
+        Hero hero = new Hero("Otto", 50, 100);
+        Monster fireMonster = new FireMonster("FeuerBert", 40);
+        Monster iceMonster = new SnowMonster("Eisbär(t)", 30);
+        Phoenix phoenix = new Phoenix("Feuervogel", 60);
 
+        hero.fight(fireMonster);
+        fireMonster.fight(iceMonster);
+        phoenix.resurrect();
+        phoenix.fight(hero);
 
     }
 
-    //main method
+    // main method
     public static void main(String[] args) {
         Game game = new Game();
         game.runGame();

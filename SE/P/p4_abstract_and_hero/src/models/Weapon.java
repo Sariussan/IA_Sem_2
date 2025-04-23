@@ -4,8 +4,8 @@ public class Weapon extends Item {
     private double strength;
 
     // constructor
-    public Weapon(int id, String name, double weight, double strength) {
-        super(id, name, weight);
+    public Weapon(String name, double weight, double strength) {
+        super(name, weight);
         this.strength = strength;
     }
 

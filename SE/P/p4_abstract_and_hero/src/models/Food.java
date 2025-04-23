@@ -4,13 +4,13 @@ public class Food extends Item {
     private int healthRestored;
 
     // constructor
-    public Food(int id, String name, double weight, int healthRestored) {
-        super(id, name, weight);
+    public Food(String name, double weight, int healthRestored) {
+        super(name, weight);
         this.healthRestored = healthRestored;
     }
 
     public Food() {
-        this(1, "Kartoffel", 0.2, 1);
+        this("Kartoffel", 0.2, 1);
     }
 
     // methods

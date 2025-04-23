@@ -8,14 +8,14 @@ public class RangedWeapon extends Weapon{
     private double range;
 
     // constructor
-    public RangedWeapon(int id, String name, double weight, double strength, double range) {
-        super(id, name, weight, strength);
+    public RangedWeapon(String name, double weight, double strength, double range) {
+        super(name, weight, strength);
         this.range = range;
     }
 
     // DefaultConstructor
     public RangedWeapon() {
-        this(1, "Stein", 2.0, 1.0, 5.0);
+        this("Stein", 2.0, 1.0, 5.0);
     }
 
     // methods

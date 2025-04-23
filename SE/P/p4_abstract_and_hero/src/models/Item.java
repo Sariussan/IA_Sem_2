@@ -1,19 +1,26 @@
 package models;
 
-public class Item {
+public abstract class Item {
     protected int id;
     protected String name;
     protected double weight;
+    private static int itemCount;
 
-    //constructor
-    public Item(int id, String name, double weight) {
-        this.id =  id;
+    // constructor
+    public Item(String name, double weight) {
+        this.id = itemCount;
         this.name = name;
         this.weight = weight;
+        itemCount++;
     }
 
     // methods
-    public void printItem() {}
+    public abstract void printItem();
+
+    // control class getters and setters
+    public static int getItemCount() {
+        return itemCount;
+    }
 
     // getters and setters
     public int getId() {
@@ -39,4 +46,5 @@ public class Item {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
 }

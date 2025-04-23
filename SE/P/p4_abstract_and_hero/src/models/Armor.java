@@ -4,13 +4,13 @@ public class Armor extends Item {
     private double defense;
 
     // constructor
-    public Armor(int id, String name, double weight, double defense) {
-        super(id, name, weight);
+    public Armor(String name, double weight, double defense) {
+        super(name, weight);
         this.defense = defense;
     }
 
     public Armor() {
-        this(1, "Kartoffelsack", 20.0, 1.0);
+        this("Kartoffelsack", 20.0, 1.0);
     }
 
     // methods

@@ -4,13 +4,13 @@ public class Potion extends Item {
     private String effect;
 
     // constructor
-    public Potion(int id, String name, double weight, String effect) {
-        super(id, name, weight);
+    public Potion(String name, double weight, String effect) {
+        super(name, weight);
         this.effect = effect;
     }
 
     public Potion() {
-        this(1, "Gerolsteiner medium", 1.0, "durstig machen");
+        this("Gerolsteiner medium", 1.0, "durstig machen");
     }
 
     // methods
