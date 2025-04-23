@@ -4,8 +4,9 @@ public class SnowMonster extends Monster {
     private double iceStrength;
 
 
-    public SnowMonster(String name, int strength, int iceStrength) {
+    public SnowMonster(String name, int strength, double iceStrength) {
         super(name, strength);
+        this.iceStrength = iceStrength;
     }
 
     public void freeze() {

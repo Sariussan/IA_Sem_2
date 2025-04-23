@@ -40,9 +40,9 @@ public class Game {
 
         // Monsters and Heroes
         Hero hero = new Hero("Otto", 50, 100);
-        Monster fireMonster = new FireMonster("FeuerBert", 40);
-        Monster iceMonster = new SnowMonster("Eisbär(t)", 30);
-        Phoenix phoenix = new Phoenix("Feuervogel", 60);
+        Monster fireMonster = new FireMonster("FeuerBert", 40, 10);
+        Monster iceMonster = new SnowMonster("Eisbär(t)", 30, 20);
+        Phoenix phoenix = new Phoenix("Feuervogel", 60, 10, 20);
 
         hero.fight(fireMonster);
         fireMonster.fight(iceMonster);

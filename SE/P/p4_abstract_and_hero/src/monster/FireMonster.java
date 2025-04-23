@@ -4,8 +4,9 @@ public class FireMonster extends Monster {
     private double fireStrength;
 
 
-    public FireMonster(String name, int strength) {
+    public FireMonster(String name, int strength, double fireStrength) {
         super(name, strength);
+        this.fireStrength = fireStrength;
     }
 
     public void setOnFire() {

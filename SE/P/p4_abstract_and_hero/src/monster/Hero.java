@@ -1,13 +1,11 @@
 package monster;
 
-public class Hero {
-    private String name;
-    private int strength;
+public class Hero extends Monster {
     private int health;
     private final int MAX_HEALTH;
 
     public Hero(String name, int strength, int maxHealth) {
-        this.name = name;
+        super(name, strength);
         this.strength = strength;
         this.MAX_HEALTH = maxHealth;
         this.health = maxHealth;
@@ -29,15 +27,6 @@ public class Hero {
         this.health = MAX_HEALTH;
         System.out.println(this.name + " is fully healed!");
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
     public int getHealth() {
         return health;
     }

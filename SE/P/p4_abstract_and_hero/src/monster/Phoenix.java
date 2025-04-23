@@ -1,10 +1,11 @@
 package monster;
 
 public final class Phoenix extends FireMonster {
-    private int healStrength;
+    private double healStrength;
 
-    public Phoenix(String name, int strength) {
-        super(name, strength);
+    public Phoenix(String name, int strength, double fireStrength, double healStrength) {
+        super(name, strength, fireStrength);
+        this.healStrength = healStrength;
     }
 
     public void resurrect() {
@@ -19,11 +20,11 @@ public final class Phoenix extends FireMonster {
     }
 
     //getters and setters
-    public int getHealStrength() {
+    public double getHealStrength() {
         return healStrength;
     }
 
-    public void setHealStrength(int healStrength) {
+    public void setHealStrength(double healStrength) {
         this.healStrength = healStrength;
     }
 }
