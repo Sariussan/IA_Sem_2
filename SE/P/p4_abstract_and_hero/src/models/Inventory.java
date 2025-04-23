@@ -21,7 +21,7 @@ public class Inventory {
                 return item;
             }
         }
-        System.out.println("Inventory is full");
+        System.out.println("Inventory is full, cant add: " + item.getName());
         return null;
     }
 
