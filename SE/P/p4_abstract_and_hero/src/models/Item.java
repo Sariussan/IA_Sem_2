@@ -8,10 +8,10 @@ public abstract class Item {
 
     // constructor
     public Item(String name, double weight) {
-        this.id = itemCount;
         this.name = name;
         this.weight = weight;
         itemCount++;
+        this.id = itemCount;
     }
 
     // methods
