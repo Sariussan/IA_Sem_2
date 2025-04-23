@@ -15,7 +15,7 @@ public final class Phoenix extends FireMonster {
     @Override
     public void fight(Monster foe) {
         System.out.println(this.name + " fights with fiery rebirth!");
-        this.strength += healStrength; // Phoenix ability increases strength
+        this.strength += healStrength; // Phoenix ability increases strength -> permanent
         super.fight(foe);
     }
 

@@ -17,7 +17,7 @@ public class Hero extends Monster {
             System.out.println(this.name + " wins!");
         } else if (this.strength < foe.getStrength()) {
             System.out.println(foe.getName() + " wins!");
-            this.health -= 10; // Hero loses health
+            this.health -= foe.getStrength(); // Hero loses health
         } else {
             System.out.println("It's a draw!");
         }
