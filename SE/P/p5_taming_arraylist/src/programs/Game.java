@@ -44,9 +44,13 @@ public class Game {
         Monster iceMonster = new SnowMonster("Eisbär(t)", 30, 20);
         Phoenix phoenix = new Phoenix("Feuervogel", 60, 10, 20);
 
+        //tamingtest
+        phoenix.getTamed(hero);
+
         // powers get increased permanently, so the game can only run once or it will stack
         hero.fight(fireMonster);
         fireMonster.fight(iceMonster);
+        phoenix.cuddle(20);
         phoenix.resurrect();
         phoenix.fight(hero);
 
