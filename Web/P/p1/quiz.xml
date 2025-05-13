@@ -1,0 +1,27 @@
+<firma>
+    <mitarbeiter>
+        <vorname>Klaus</vorname>
+        <nachname>Dieter</nachname>
+        <email>klaus.dieter@firma.de</email>
+    </mitarbeiter>
+    <mitarbeiter>
+        <vorname>Emilia</vorname>
+        <nachname>Mail</nachname>
+        <email>emilia.mail@firma.de</email>
+</firma>
+
+<hochschule>
+    <student>
+        <name>Max Mustermann</name>
+        <matrikelnummer>111111</matrikelnummer>
+    </student>
+    <student>
+        <name>Maike Musterfrau</name>
+        <matrikelnummer>222222</matrikelnummer>
+    </student>
+</hochschule>
+
+
+<haus baujahr="1995" bauart="Zweifamilienhaus">
+    Mein Haus
+</haus>

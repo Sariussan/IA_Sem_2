@@ -1,0 +1,36 @@
+<unternehmen>
+    <standort stadt="Landsberg am Lech" strasse="Katharinenstraße">
+        <mitarbeiter id="1">
+            <name>
+                <vorname>Michael</vorname>
+                <nachname>Schuster</nachname>
+            </name>
+            <position>Projektleiter</position>
+            <abteilung>Governance</abteilung>
+            <wohnort>Landsberg am Lech</wohnort>
+            <homeoffice>False</homeoffice>
+        </mitarbeiter>
+         <mitarbeiter id="2">
+            <name>
+                <vorname>Hans</vorname>
+                <nachname>Meier</nachname>
+            </name>
+            <position>Designer</position>
+            <abteilung>Marketing</abteilung>
+            <wohnort>Augsburg</wohnort>
+            <homeoffice>True</homeoffice>
+        </mitarbeiter>
+    </standort>
+    <standort stadt ="München" strasse="Hanauer Straße">
+        <mitarbeiter id="3">
+            <name>
+                <vorname>Manfred</vorname>
+                <nachname>Schweinsteiger</nachname>
+            </name>
+            <position>Programmierer</position>
+            <abteilung>Interne IT</abteilung>
+            <wohnort>Augsburg</wohnort>
+            <homeoffice>True</homeoffice>
+        </mitarbeiter>
+    </standort>
+</unternehmen>
