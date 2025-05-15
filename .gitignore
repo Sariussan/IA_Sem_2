@@ -1,6 +1,55 @@
+# Custom
 /ignore
 ignore
 
 **/**.idea
 
 **/out**
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Logs
+logs/
+*.log
+logs/*.log
+
+# Build directories
+dist/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE-specific files
+.vscode/
+.idea/
+*.iml
+
+# Java-specific files
+*.class
+*.jar
+*.war
+*.ear
+*.javadoc
+*.project
+*.classpath
+target/
+
+# HTML/CSS/JavaScript temporary files
+*.min.js
+*.min.css
+*.map
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# OS generated files
+Thumbs.db
+.DS_Store
