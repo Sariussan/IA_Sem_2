@@ -1,5 +1,8 @@
 package monster;
 
+import models.*;
+import exceptions.*;
+
 /**
  * Class Held represents a Hero in our text adventure
  */
@@ -10,7 +13,7 @@ public class HeroNew {
     /** Strength of the Hero (i.e. how much he can carry) */
     protected double strength;
     /** The inventory, where all kind of stuff can be stored */
-    private InventoryOld inventory;
+    private Inventory inventory;
 
     /**
      * Held constructor
@@ -22,7 +25,7 @@ public class HeroNew {
     public HeroNew(String name, double strength, int inventorySize) {
         this.name = name;
         this.strength = strength;
-        inventory = new InventoryOld(inventorySize);
+        inventory = new Inventory(inventorySize);
     }
 
     /**
@@ -38,6 +41,20 @@ public class HeroNew {
         } else {
             throw new TooWeakException();
         }
+    }
+
+    /**
+     * Add an item to the inventory, ensuring space and weight constraints
+     * 
+     * @param item the item to be added
+     * @throws InventoryFullException
+     * @throws TooWeakException
+     */
+    public void zuInventarHinzufuegen(InventoryItem item) throws InventoryFullException, TooWeakException {
+        if (inventory.getWeight() + item.getWeight() > strength) {
+            throw new TooWeakException("Item is too heavy to add to the inventory.");
+        }
+        inventory.addItem(item); // This may throw InventoryFullException, which is propagated
     }
 
     /**
