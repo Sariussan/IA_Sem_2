@@ -1,6 +1,6 @@
 package models;
 
-public class Weapon extends Item {
+public class Weapon extends InventoryItem {
     private double strength;
 
     // constructor
@@ -9,14 +9,14 @@ public class Weapon extends Item {
         this.strength = strength;
     }
 
-    //methods
+    // methods
     @Override
     public void printItem() {
         System.out.println("id: " + id + " name: " + name + " weight: " + weight + " strength: " + strength);
     }
 
     public double getAttackValue(double distance) {
-            return strength;
+        return strength;
     }
 
     // getters and setters
@@ -24,11 +24,8 @@ public class Weapon extends Item {
         return strength;
     }
 
-
-
     public void setStrength(double strength) {
         this.strength = strength;
     }
-
 
 }

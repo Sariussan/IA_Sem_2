@@ -1,6 +1,6 @@
 package models;
 
-public class Food extends Item {
+public class Food extends InventoryItem {
     private int healthRestored;
 
     // constructor
@@ -16,11 +16,12 @@ public class Food extends Item {
     // methods
     @Override
     public void printItem() {
-        System.out.println("id: " + id + " name: " + name + " weight: " + weight + " healthRestored: " + healthRestored);
+        System.out
+                .println("id: " + id + " name: " + name + " weight: " + weight + " healthRestored: " + healthRestored);
     }
 
     public int cook() {
-        //more logic?
+        // more logic?
 
         return healthRestored;
     }

@@ -18,15 +18,15 @@ public class Game {
 
         // setup
         Weapon weapon1 = new MeleeWeapon("schwert", 2.5, 5.0, 5.0);
-        System.out.println("Item Count: " + Item.getItemCount());
+        System.out.println("Item Count: " + InventoryItem.getItemCount());
         Weapon weapon2 = new RangedWeapon("Bogen", 2.5, 5.0, 15.0);
-        System.out.println("Item Count: " + Item.getItemCount());
+        System.out.println("Item Count: " + InventoryItem.getItemCount());
         Potion potion1 = new Potion("Heiltrank", 1.0, "Heilung 5");
-        System.out.println("Item Count: " + Item.getItemCount());
+        System.out.println("Item Count: " + InventoryItem.getItemCount());
         Armor armor1 = new Armor("Rüstung", 10.0, 50.0);
-        System.out.println("Item Count: " + Item.getItemCount());
+        System.out.println("Item Count: " + InventoryItem.getItemCount());
         Food food1 = new Food("Schweinsbratenkit", 5.0, 20);
-        System.out.println("Item Count: " + Item.getItemCount());
+        System.out.println("Item Count: " + InventoryItem.getItemCount());
         this.inventory.addItem(weapon1);
         this.inventory.addItem(weapon2);
         this.inventory.addItem(potion1);

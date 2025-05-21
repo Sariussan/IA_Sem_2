@@ -1,6 +1,6 @@
 package models;
 
-public class Armor extends Item {
+public class Armor extends InventoryItem {
     private double defense;
 
     // constructor
@@ -20,7 +20,7 @@ public class Armor extends Item {
     }
 
     public double getDefenseValue() {
-        //more logic?
+        // more logic?
         return defense;
     }
 
@@ -28,6 +28,7 @@ public class Armor extends Item {
     public double getDefense() {
         return defense;
     }
+
     public void setDefense(double defense) {
         this.defense = defense;
     }

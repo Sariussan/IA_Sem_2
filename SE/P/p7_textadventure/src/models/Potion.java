@@ -1,6 +1,6 @@
 package models;
 
-public class Potion extends Item {
+public class Potion extends InventoryItem {
     private String effect;
 
     // constructor
@@ -20,7 +20,7 @@ public class Potion extends Item {
     }
 
     public String applyEffect() {
-        //more logic?
+        // more logic?
 
         return effect;
     }

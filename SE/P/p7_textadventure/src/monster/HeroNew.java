@@ -1,8 +1,9 @@
+package monster;
 
 /**
  * Class Held represents a Hero in our text adventure
  */
-public class Hero {
+public class HeroNew {
 
     /** Name of the Hero */
     protected String name;
@@ -18,7 +19,7 @@ public class Hero {
      * @param strength      how much he can carry
      * @param inventorySize how many items he can store in the inventory
      */
-    public Hero(String name, double strength, int inventorySize) {
+    public HeroNew(String name, double strength, int inventorySize) {
         this.name = name;
         this.strength = strength;
         inventory = new Inventory(inventorySize);

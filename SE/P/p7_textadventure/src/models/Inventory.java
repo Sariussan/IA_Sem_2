@@ -6,17 +6,17 @@ public class Inventory {
 
     // vars
     private int size;
-    private ArrayList<Item> inventory; // ArrayList inventory
+    private ArrayList<InventoryItem> inventory; // ArrayList inventory
 
     // constructor
     public Inventory(int size) {
         this.size = size;
-        inventory = new ArrayList<Item>(size); // ArrayList inventory
+        inventory = new ArrayList<InventoryItem>(size); // ArrayList inventory
     }
 
     // methods
     // ArrayList inventory
-    public Item addItem(Item item) {
+    public InventoryItem addItem(InventoryItem item) {
         if (inventory.size() < size) {
             inventory.add(item);
             System.out.println("Item added to inventory: " + item.getName());
@@ -27,7 +27,7 @@ public class Inventory {
     }
 
     public void listInventory() {
-        for (Item item : inventory) {
+        for (InventoryItem item : inventory) {
             if (item != null) {
                 item.printItem();
             }

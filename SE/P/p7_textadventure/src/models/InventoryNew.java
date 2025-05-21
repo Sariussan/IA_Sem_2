@@ -1,3 +1,4 @@
+package models;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,7 +7,7 @@ import java.util.Collections;
  * Class Inventory
  * Here Inventory Items can be stored and administered.
  */
-public class Inventory {
+public class InventoryNew {
 
     /** Storage for the Inventory item */
     private ArrayList<InventoryItem> items;
@@ -19,7 +20,7 @@ public class Inventory {
      * 
      * @param size
      */
-    public Inventory(int size) {
+    public InventoryNew(int size) {
         items = new ArrayList<InventoryItem>();
         maxNumberOfItems = size;
     }

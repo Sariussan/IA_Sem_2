@@ -2,14 +2,14 @@ package models;
 
 import java.lang.Comparable;
 
-public abstract class Item {
+public abstract class InventoryItem {
     protected int id;
     protected String name;
     protected double weight;
     private static int itemCount;
 
     // constructor
-    public Item(String name, double weight) {
+    public InventoryItem(String name, double weight) {
         this.name = name;
         this.weight = weight;
         itemCount++;
@@ -24,7 +24,7 @@ public abstract class Item {
         return itemCount;
     }
 
-    public Item compareWeight(Item ItemB) {
+    public InventoryItem compareWeight(InventoryItem ItemB) {
         if (this.weight > ItemB.getWeight()) {
             return this;
         } else {
