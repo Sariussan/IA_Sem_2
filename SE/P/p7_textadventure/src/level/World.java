@@ -1,3 +1,4 @@
+package level;
 
 import java.util.Scanner;
 
@@ -9,7 +10,7 @@ public class World {
     /** Our hero that visits the world */
     Hero hero;
 
-    /** the current room the hero is in*/
+    /** the current room the hero is in */
     private Room currentRoom;
 
     /** to fetch keyboard input */
@@ -17,6 +18,7 @@ public class World {
 
     /**
      * Constructs a word for a hero
+     * 
      * @param hero the hero that walks around in this world
      */
     public World(Hero hero) {
@@ -26,6 +28,7 @@ public class World {
 
     /**
      * Set a room as current room, where actions take place
+     * 
      * @param r
      */
     public void setCurrentRoom(Room r) {
@@ -49,7 +52,7 @@ public class World {
      */
     public void start() {
 
-        while(true) {
+        while (true) {
 
             System.out.println("Was möchtest du als nächstes tun (Enter für Hilfe)? ");
             String input = inputFetcher.nextLine();
@@ -82,38 +85,37 @@ public class World {
      * - error handling if invalid input
      */
     public void moveToNextRoom() {
-       
-       
-       // TODO Code to add...
-       
+
+        // TODO Code to add...
+
     }
 
     /**
      * pick an item
-     * - Ask the user which items are in the room (with running number starting at 0)
+     * - Ask the user which items are in the room (with running number starting at
+     * 0)
      * - getInput, with this input fetch item
-     * - this item should be put in the hero's inventory if possible (and removed from the room)
+     * - this item should be put in the hero's inventory if possible (and removed
+     * from the room)
      * - error hanling, if something is wrong
      */
     public void take() {
-        
-        
+
         // TODO Code to add...
-        
-        
+
     }
 
     /**
      * remove an item
-     * - list which items are in the inventory (with running number beginning from 0)
+     * - list which items are in the inventory (with running number beginning from
+     * 0)
      * - fetch input which item to remove
      * - remove this item
      */
     public void put() {
-        
-        
+
         // TODO Code to add...
-        
+
     }
 
 }
