@@ -2,7 +2,7 @@ package models;
 
 import java.lang.Comparable;
 
-public abstract class InventoryItem {
+public abstract class InventoryItem implements Comparable<InventoryItem> {
     protected int id;
     protected String name;
     protected double weight;
@@ -32,6 +32,12 @@ public abstract class InventoryItem {
         }
     }
 
+    // Comparable implementation
+    @Override
+    public int compareTo(InventoryItem other) {
+        return Double.compare(this.weight, other.weight);
+    }
+
     // getters and setters
     public int getId() {
         return id;
@@ -39,6 +45,10 @@ public abstract class InventoryItem {
 
     public String getName() {
         return name;
+    }
+
+    public String getDisplayName() {
+        return this.name;
     }
 
     public double getWeight() {

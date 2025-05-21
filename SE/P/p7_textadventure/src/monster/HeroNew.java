@@ -10,7 +10,7 @@ public class HeroNew {
     /** Strength of the Hero (i.e. how much he can carry) */
     protected double strength;
     /** The inventory, where all kind of stuff can be stored */
-    private Inventory inventory;
+    private InventoryOld inventory;
 
     /**
      * Held constructor
@@ -22,7 +22,7 @@ public class HeroNew {
     public HeroNew(String name, double strength, int inventorySize) {
         this.name = name;
         this.strength = strength;
-        inventory = new Inventory(inventorySize);
+        inventory = new InventoryOld(inventorySize);
     }
 
     /**
