@@ -5,16 +5,16 @@ import interfaces.Tameable;
 public class Monster implements Tameable {
     protected String name;
     protected double strength;
-    Hero Tamer;
+    HeroOld Tamer;
     private boolean tameable = false;
 
-    //constructor
+    // constructor
     public Monster(String name, int strength) {
         this.name = name;
         this.strength = strength;
     }
 
-    //methods
+    // methods
     public void fight(Monster foe) {
         System.out.println(this.name + " fights " + foe.name);
         if (this.strength > foe.strength) {
@@ -26,7 +26,7 @@ public class Monster implements Tameable {
         }
     }
 
-    public void getTamed(Hero Tamer) {
+    public void getTamed(HeroOld Tamer) {
         System.out.println(this.name + " gets tamed by " + Tamer.name);
         // some fancy code to make this work
         if (this.Tamer == null && this.tameable) {
@@ -42,7 +42,7 @@ public class Monster implements Tameable {
 
     }
 
-    //getters and setters
+    // getters and setters
     public String getName() {
         return name;
     }

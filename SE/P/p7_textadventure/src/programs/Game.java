@@ -2,6 +2,7 @@ package programs;
 
 import models.*;
 import monster.*;
+import level.*;
 
 public class Game {
 
@@ -10,11 +11,11 @@ public class Game {
 
     // constructor
     public Game() {
-        inventory = new Inventory(3);
     }
 
     // methods
-    public void runGame() {
+    public void runGame1() {
+        inventory = new Inventory(3);
 
         // setup
         Weapon weapon1 = new MeleeWeapon("schwert", 2.5, 5.0, 5.0);
@@ -27,19 +28,23 @@ public class Game {
         System.out.println("Item Count: " + InventoryItem.getItemCount());
         Food food1 = new Food("Schweinsbratenkit", 5.0, 20);
         System.out.println("Item Count: " + InventoryItem.getItemCount());
-        this.inventory.addItem(weapon1);
-        this.inventory.addItem(weapon2);
-        this.inventory.addItem(potion1);
-        this.inventory.addItem(armor1);
-        this.inventory.addItem(food1);
+        try {
+            this.inventory.addItem(weapon1);
+            this.inventory.addItem(weapon2);
+            this.inventory.addItem(potion1);
+            this.inventory.addItem(armor1);
+            this.inventory.addItem(food1);
+        } catch (Exception e) {
+            // This is unnecessary
+        }
 
         // print items
-        inventory.listInventory();
+        // inventory.listInventory();
 
         // use methods of items
 
         // Monsters and Heroes
-        Hero hero = new Hero("Otto", 50, 100);
+        HeroOld hero = new HeroOld("Otto", 50, 100);
         Monster fireMonster = new FireMonster("FeuerBert", 40, 10);
         Monster iceMonster = new SnowMonster("Eisbär(t)", 30, 20);
         Phoenix phoenix = new Phoenix("Feuervogel", 60, 10, 20);
@@ -57,9 +62,41 @@ public class Game {
 
     }
 
+    public void runGame2() {
+        // Held erstellen
+        Hero hero = new Hero("Hackl Schorsch", 100, 200);
+
+        // Räume erstellen
+        Room room1 = new Room("Brauereieingang", "Da gehts nei.");
+        Room room2 = new Room("Schankraum", "Hier gibts Bier.");
+        Room room3 = new Room("Kassenraum", "Biergeldaufbewahrungsörtlichkeit.");
+
+        // Verbinden
+        room1.addAdjacentRoom(room2);
+        room2.addAdjacentRoom(room1);
+        room2.addAdjacentRoom(room3);
+        room3.addAdjacentRoom(room2);
+
+        Weapon krug = new MeleeWeapon("Maßkrug", 3.0, 10.0, 15.0);
+        Potion hoibe = new Potion("Weißbier", 0.5, "Stellt 20 HP wieder her");
+        Armor lederhose = new Armor("Lederbix", 5.0, 30.0);
+        room1.addItem(lederhose);
+        room2.addItem(hoibe);
+        room3.addItem(krug);
+
+        // Schöne neue Welt
+        World world = new World(hero);
+        world.setCurrentRoom(room1);
+
+        // Spielstart
+        world.start();
+    }
+
     // main method
     public static void main(String[] args) {
         Game game = new Game();
-        game.runGame();
+        game.runGame2();
     }
 }
+
+// Items

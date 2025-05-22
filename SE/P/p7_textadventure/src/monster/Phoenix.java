@@ -24,20 +24,20 @@ public final class Phoenix extends FireMonster implements Companion {
     }
 
     @Override
-    public void getTamed(Hero Tamer) {
+    public void getTamed(HeroOld Tamer) {
         double randomNumber = Math.random();
         if (this.Tamer == null) {
-            System.out.println(Tamer.getName() + "is trying to tame" + this.name );
-            if(randomNumber > 0.66) {
-                System.out.println(Tamer.getName() + " tamed " + this.name + "!" );
+            System.out.println(Tamer.getName() + "is trying to tame" + this.name);
+            if (randomNumber > 0.66) {
+                System.out.println(Tamer.getName() + " tamed " + this.name + "!");
                 this.Tamer = Tamer;
-            }else {
-                System.out.println(Tamer.getName() + " failed to tame " + this.name + "." );
+            } else {
+                System.out.println(Tamer.getName() + " failed to tame " + this.name + ".");
             }
         }
     }
 
-    //getters and setters
+    // getters and setters
     public double getHealStrength() {
         return healStrength;
     }

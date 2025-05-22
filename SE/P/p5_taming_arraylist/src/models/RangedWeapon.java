@@ -1,8 +1,6 @@
 package models;
 
-import org.w3c.dom.ranges.Range;
-
-public class RangedWeapon extends Weapon{
+public class RangedWeapon extends Weapon {
 
     // vars
     private double range;

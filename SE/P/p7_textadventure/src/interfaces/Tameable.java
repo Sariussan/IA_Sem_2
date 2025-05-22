@@ -1,8 +1,9 @@
 package interfaces;
 
-import monster.Hero;
+import monster.HeroOld;
 
 public interface Tameable {
-    void getTamed(Hero Tamer);
+    void getTamed(HeroOld Tamer);
+
     void cuddle(int value);
 }

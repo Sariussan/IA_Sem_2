@@ -2,6 +2,10 @@ package level;
 
 import java.util.Scanner;
 
+import models.*;
+import monster.*;
+import exceptions.*;
+
 /**
  * A World with rooms, items and a hero (later on, more can be added)
  */
@@ -83,11 +87,22 @@ public class World {
      * - input with the number of the room that should be reached should be fetched
      * - fetch the room and go to it (currentRoom = the fetched room),
      * - error handling if invalid input
+     * - check to not get stuck in dialogue
      */
     public void moveToNextRoom() {
 
-        // TODO Code to add...
-
+        System.out.println("Wohin möchtest du gehen? ");
+        currentRoom.listAdjacentRooms();
+        int roomNumber = inputFetcher.nextInt();
+        inputFetcher.nextLine(); // newline
+        try {
+            Room nextRoom = currentRoom.getAdjacentRoom(roomNumber);
+            setCurrentRoom(nextRoom);
+            System.out.println("Du bist jetzt in " + currentRoom.getName());
+        } catch (NotThereException e) {
+            System.out.println("Dieser Raum existiert nicht.");
+            return;
+        }
     }
 
     /**
@@ -98,11 +113,30 @@ public class World {
      * - this item should be put in the hero's inventory if possible (and removed
      * from the room)
      * - error hanling, if something is wrong
+     * - check to not get stuck in dialogue
      */
     public void take() {
 
-        // TODO Code to add...
+        System.out.println("Was möchtest du aufheben? ");
+        currentRoom.listContent();
 
+        int itemNumber = inputFetcher.nextInt();
+        inputFetcher.nextLine(); // newline
+        try {
+            InventoryItem item = currentRoom.getItem(itemNumber);
+            hero.zuInventarHinzufuegen(item);
+            currentRoom.removeItem(item);
+            System.out.println("Du hast " + item.getDisplayName() + " aufgehoben.");
+        } catch (NotThereException e) {
+            System.out.println("Dieser Gegenstand existiert nicht.");
+            return;
+        } catch (InventoryFullException e) {
+            System.out.println("Das Inventar ist voll.");
+            return;
+        } catch (TooWeakException e) {
+            System.out.println("Der Gegenstand ist zu schwer.");
+            return;
+        }
     }
 
     /**
@@ -111,11 +145,21 @@ public class World {
      * 0)
      * - fetch input which item to remove
      * - remove this item
+     * - check to not get stuck in dialogue
      */
     public void put() {
-
-        // TODO Code to add...
-
+        System.out.println("Was möchtest du ablegen? ");
+        hero.listInventoryContent();
+        int itemNumber = inputFetcher.nextInt();
+        inputFetcher.nextLine(); // newline
+        try {
+            InventoryItem item = hero.getInventoryItem(itemNumber);
+            currentRoom.addItem(item);
+            hero.removeInventoryItem(item);
+            System.out.println("Du hast " + item.getDisplayName() + " abgelegt.");
+        } catch (NotThereException e) {
+            System.out.println("Dieser Gegenstand existiert nicht.");
+            return;
+        }
     }
-
 }

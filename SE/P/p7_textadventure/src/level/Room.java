@@ -2,6 +2,9 @@ package level;
 
 import java.util.ArrayList;
 
+import models.*;
+import exceptions.*;
+
 /**
  * Class Room with content and descriptions
  * Adjacent rooms that can be reached must be set manually with care, no checks
@@ -63,7 +66,7 @@ public class Room {
      * Display the room name an the short description of the room
      */
     public void introduceRoom() {
-        System.out.println("Das ist " + name);
+        System.out.println("Du bist in " + name);
         System.out.println(description);
     }
 
